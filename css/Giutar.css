@@ -1,0 +1,94 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #F3AC3C;
+}
+
+.Giutar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  height: 500px;
+}
+
+.Giutar .circles {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  transform: translateY(18%);
+  width: 450px;
+  height: 450px;
+  background: #68350a;
+  border-radius: 50%;
+}
+
+.Giutar .circles::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: #68350a;
+  border-radius: 50%;
+}
+
+.Giutar .circles .litte-circle {
+  width: 170px;
+  height: 170px;
+  transform: translate(0%, -85%);
+  border-radius: 50%;
+  background-color: #1A4341;
+  border: 10px solid #F3AC3C;
+  z-index: 1;
+}
+
+.Giutar .circles .handler {
+  position: relative;
+  width: 150px;
+  height: 20px;
+  background-color: #1A4341;
+  border-radius: 20px;
+}
+
+.Giutar .circles .handler div {
+  position: absolute;
+  bottom: 0;
+  width: 7px;
+  height: 465px;
+  background-color: black;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.Giutar .circles .handler .nota1 {
+  left: 20%;
+  height: 454px;
+}
+
+.Giutar .circles .handler .nota2 {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Giutar .circles .handler .nota3 {
+  left: 75%;
+  height: 455px;
+}

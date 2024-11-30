@@ -1,0 +1,139 @@
+
+:root {
+  --main-color: #9292ff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #363131;
+}
+
+.calc {
+  width: 400px;
+  height: 575px;
+  background-color: #000;
+}
+
+.calc .input {
+  width: 100%;
+  height: 70px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.calc .input .para {
+  width: fit-content;
+  height: 60px;
+  line-height: 60px;
+  font-size: 40px;
+  margin-top: 10px;
+  color: var(--main-color);
+  padding-right: 5px;
+  padding-left: 10px;
+  border-right: 2px solid black;
+  outline: none;
+  animation: slash 1s infinite steps(2);
+  background-color: #000;
+}
+
+@keyframes slash {
+  100% {
+    border-color: var(--main-color);
+  }
+}
+
+.calc .remove button {
+  background: transparent;
+  border: none;
+  padding: 5px 20px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  transition: 0.5s;
+  border: 1px solid transparent;
+}
+
+.calc .remove button i {
+  transform: rotate(180deg);
+  font-size: 20px;
+  color: #525258;
+}
+
+hr {
+  width: calc(100% - 20px);
+  margin: 5px auto;
+  border-color: #bbb8b8;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.calc .numbers  {
+  width: 100%;
+  height: 500px;
+  background: transparent;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(5, 90px);
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.calc .numbers button {
+  line-height: 100%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: linear;
+  border: none;
+  font-size: 45px;
+  color: var(--main-color);
+  background-color: #1d2627;
+  cursor: pointer;
+}
+
+.calc .numbers button:nth-child(4),
+.calc .numbers button:nth-child(8),
+.calc .numbers button:nth-child(12),
+.calc .numbers button:nth-child(16) {
+  font-family: sans-serif;
+}
+
+.calc .numbers button:nth-child(4),
+.calc .numbers button:nth-child(12),
+.calc .numbers button:nth-child(16) {
+  font-size: 60px;
+}
+
+.calc .numbers button:first-child {
+  color: red;
+}
+
+.calc .numbers button:last-child {
+  color: white;
+  background-color: #3b3bb9;
+  font-size: 45px;
+}
+
+
+@keyframes cool {
+  50% {
+    background-color: #416f74;
+    font-size: 35px;
+  } 
+  100% {
+    background-color: #1d2627;
+    font-size: 45px;
+  }
+}

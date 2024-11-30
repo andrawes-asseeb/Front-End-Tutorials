@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 5000px;
+        position: relative;
+        /* background-color: #000000cd; */
+        background: linear-gradient(to bottom, yellow, blue, red, black);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      main {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+      }
+
+      main * {
+        position: absolute;
+      }
+
+      main span {
+        display: block;
+        width: 100px;
+        height: 100px;
+        background: conic-gradient(black 0deg, #EEE 0deg);
+        z-index: -1;
+        border-radius: 50%;
+        transform: scale(1.1);
+      }
+
+      main button {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        font-size: 80px;
+        border-radius: 50%;
+        border: none; 
+        cursor: pointer;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <button>&uparrow;</button>
+      <span></span>
+    </main>
+    <script src="js/Percentage.js"></script>
+  </body>
+</html> 

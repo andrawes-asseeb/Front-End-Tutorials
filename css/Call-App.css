@@ -1,0 +1,113 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000bd;
+}
+
+.call-phone,
+.calling {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.call-phone p,
+.calling p {
+  height: 50px;
+  margin-top: 50px;
+  font-size: 45px;
+  letter-spacing: 3px;
+  color: white;
+  transition: 0.5s;
+}
+
+.call-phone .characters,
+.calling .call-chara {
+  display: grid;
+  width: 300px;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 30px;
+  row-gap: 20px;
+}
+
+.call-phone .characters button {
+  padding: 20px;
+  border: none;
+  border-radius: 50%;
+  font-size: 40px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.call-phone .headphone,
+.calling .cancel {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  font-size: 40px;
+  color: white;
+  background-color: #5858ff;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+
+@keyframes smooth {
+  0% {
+    font-size: 40px;
+  } 
+  50% {
+    font-size: 30px;
+    background-color: #ffffff1f;
+  } 
+
+  100% {
+    font-size: 40px;
+    background-color: transparent;
+  }
+}
+
+/* ############################################################################################## */
+
+.calling .call-chara button {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 0px;
+  transition: 1s;
+}
+
+.calling .two {
+  font-size: 0;
+}
+
+.calling {
+  justify-content: space-evenly;
+  transition: 1s;
+}
+
+.calling .cancel {
+  background-color: red;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  transition: 1s;
+} 

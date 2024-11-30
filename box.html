@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/box.css">
+    <title>box</title>
+  </head>
+  <body>
+    <div class="parent">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span id="door"></span>
+    </div>
+    <button id="OP">Open</button>
+
+    <script>
+    var door = document.getElementById('door')
+    var OpBtn = document.getElementById('OP')
+
+    OpBtn.onclick = function() {
+      if(OpBtn.innerText == 'Open') {
+        door.style.top = '-210px'
+        OpBtn.innerText = 'Close'
+      } else {
+        door.style.top = '-136px'
+        OpBtn.innerText = 'Open'
+      }
+    }
+    </script>
+  </body>
+</html>

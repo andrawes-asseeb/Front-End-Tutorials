@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/housing-Booking.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>housing-Booking</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="search">
+          <button>Search</button>
+          <input type="text" placeholder="Search">
+        </div>
+        <h1>Housing Booking App</h1>
+      </header>
+      <!-- ############################################################################## -->
+      <main id="main">
+        <aside>
+          <div class="center">
+            <h3>لوحة التحكم</h3>
+            <h3 id="sut-btn">كشف الطلاب</h3>
+            <h3>الموظفين / الامتياز</h3>
+            <h3>المصروفات</h3>
+            <h3>دخل اضافي</h3>
+            <h3>عميل</h3>
+          </div>
+        </aside>
+        <!-- ############ -->
+        <div class="students-report" id="students-report">  
+          <header>
+            <button id="Add">اضافة</button>
+            <h1>كشف الطلاب</h1>
+          </header>
+        </div>
+      </main>
+
+      <!-- ############################################################################## -->
+      <div class="dark"></div>
+      <!-- Data -->
+      <div class="data">
+        <h2>رجاء ادخال البيانات</h2>
+        <input type="text" placeholder="الاسم ثلاثي" required id="name" maxlength="30">
+        <input type="text" placeholder="الكلية" required id="college" maxlength="10">
+        <input type="text" placeholder="المرحلة الدراسية" required id="year" maxlength="5">
+        <h3>حالة الدفع</h3>
+        <label for="check1">دفع</label>
+        <input type="checkbox" id="check1">
+        <label for="check2">لم يدفع</label>
+        <input type="checkbox" id="check2">
+
+        <div class="submit">
+          <button id="cancel">cancel</button>
+          <button id="submit">submit</button>
+        </div>
+      </div>
+
+      <div class="delete">
+        <p>هل انت متأكد من انك تريد <br>الحذف</p>
+        <div class="buttons">
+          <button class="Yes" id="yes">Yes</button>
+          <button class="No" id="no">No</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/housing-Booking.js"></script>
+  </body>
+</html>

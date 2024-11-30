@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth_links_hover</title>
+    <!-- Start CSS -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #2d2d2d;
+      }
+
+      ul {
+        position: relative;
+      }
+
+      ul li {
+        display: inline-block;
+        margin: 0 10px;
+        list-style: none;
+      }
+
+      ul li a {
+        text-decoration: none;
+        padding: 15px;
+        color: #838383;
+        border-radius: 20px;
+        font-size: 20px;
+      }
+      ul li:first-child a {
+        color: white;
+      }
+
+      ul div {
+        position: absolute;
+        left: 15px;
+        top: 30px;
+        width: 50px;
+        height: 3px;
+        margin-left: 10px;
+        background-color: white;
+        transition: 0.5s;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+    </style>
+    <!-- End CSS -->
+  </head>
+  <body>
+    <ul>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#Services">Our Services</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#Join">Join</a></li>
+      <div class="tracker" id="tracker"></div>
+    </ul>
+
+    <!-- Start javascript -->
+    <script>
+
+      const links = document.querySelectorAll('ul li a')
+      const tracker = document.getElementById("tracker");
+
+      links.forEach((ele) => {
+        ele.onclick = function () {
+          tracker.style.cssText = `left: ${ele.offsetLeft}px; width: ${Math.floor(ele.getBoundingClientRect().width) - 18}px`;
+          links.forEach((el) => {
+            el.style.color = '#838383'
+          })
+          ele.style.color = 'white' // fix it later
+        }
+      })
+
+      /*
+        we used the method getBoundingClientRect()  ==> to the get the styles from the element
+        we used the property offsetLeft to let you know the position of the element
+        [Search for the family of => offset like [offsetLeft, ....]]
+      */
+    </script>
+    <!-- End javascript -->
+  </body>
+</html>

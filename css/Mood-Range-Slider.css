@@ -1,0 +1,45 @@
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.parent {
+  position: relative;
+  margin: 200px auto 0px;
+  width: 350px;
+  height: 250px;
+  background-color: #DDD;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.parent div {
+  border-radius: 30px;
+  padding: 10px 70px;
+  font-size: 30px;
+  text-align: center;
+  background: #777;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  transition: 0.5;
+}
+
+.parent input {
+  top: 75%;
+  width: 250px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.parent p {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}

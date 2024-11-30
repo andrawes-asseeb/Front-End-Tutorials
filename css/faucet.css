@@ -1,0 +1,106 @@
+
+* {
+  padding: 0; 
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000c5;
+  overflow: hidden;
+}
+
+.faucet {
+  position: relative;
+}
+
+.faucet .tap {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  background: red;
+}
+
+.faucet .tap .small-stick {
+  position: absolute;
+  right: 50px;
+  height: 50px;
+  width: 20px;
+  background: black;
+  top: -50px;
+}
+
+.faucet .tap .reel {
+  width: 100px;
+  height: 20px;
+  background: blue;
+  position: absolute;
+  right: 10px;
+  top: -70px;
+  transform: rotateY(0deg);
+  transition: 4s;
+  cursor: pointer;
+}
+
+.faucet .tap .small-circle {
+  position: absolute;
+  right: -50px;
+  border: 50px solid transparent;
+  border-radius: 50%;
+  border-right-color: black;
+  transform: rotate(-45deg);
+}
+
+.faucet .tap .water {
+  position: absolute;
+  right: -35px;
+  width: 10px;
+  height: 0;  /* should be 280px in js */
+  background: #5252ffe6;
+  top: 50px;
+  transition: 3s;
+
+}
+
+/* ###################################### */
+
+.glass {
+  display: flex;
+  position: absolute;
+  right: -75px;
+  top: 140px;
+  background: #eeeeee3b;
+  width: 100px;
+  height: 190px;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  overflow: hidden;
+  transition: 2s;
+}
+
+.glass .water {
+  position: absolute;
+  align-self: flex-end;
+  width: 100px;
+  height: 0px;
+  background: #5252ff;
+  transition: 6s;
+}
+
+.faucet button {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  bottom: -200px;
+  font-size: 55px;
+  font-family: monospace;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 1s;
+}

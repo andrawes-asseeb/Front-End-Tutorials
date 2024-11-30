@@ -1,0 +1,61 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000;
+  color: white;
+}
+
+h1 span {
+  position: relative;
+  color: #1313b2;
+}
+
+h1 span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid #1313b2;
+  background-color: black;
+  animation: Moving 4s steps(12) infinite;
+}
+
+/* --You Can Skip The 0% In The Animation and Go To The Next Like This Code Below */
+@keyframes Moving { 
+  40%, 60% {
+    left: 105%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* This Code Is Also Good */
+
+/* @keyframes Moving {
+  0% {
+    left: 0;
+  }
+  30%, 50% {
+    left: 105%;
+  }
+  100% {
+    left: 0;
+  }
+} */
+/* 
+--in the animtion there is some smooth method called steps() and you type the step you want to skip
+*/

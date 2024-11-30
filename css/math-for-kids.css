@@ -1,0 +1,171 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+main {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  font-family: cursive;
+}
+
+main header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: red;
+}
+
+main header h2 {
+  color: white;
+  padding: 0 0 0 50px;
+}
+
+main header ul {
+  display: flex;
+  list-style: none; 
+}
+
+main header ul li {
+  margin-right: 50px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  main header h2 {
+    font-size: 20px;
+    padding: 0 0 0 10px;
+  }
+  
+  main header ul li {
+    margin-right: 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  main header h2 {
+    font-size: 15px;
+    padding: 0 0 0 5px;
+  }
+
+  main header ul li {
+    margin-right: 10px;
+    font-size: 15px;
+  }
+}
+
+/* ################################################################################################*/
+
+main section {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-around;
+  align-items: center;
+  height: 550px;
+}
+
+main section .process div:not(:first-child) {
+  display: none;
+}
+
+main section span,
+main section p {
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+}
+
+main section span:first-child,
+main section span:nth-child(4) {
+  color: red;
+}
+
+main section span:nth-child(2) {
+  color: blue;
+}
+
+main section span:nth-child(3) {
+  color: yellow;
+}
+
+main section span:last-child{
+  color: #3b3b3b;
+}
+
+/* ##################################################################################################### */
+
+main section aside div {
+  cursor: pointer;
+}
+
+main section aside div:not(:first-child) {
+  display: none;
+}
+
+main section aside div p {
+  border: 5px solid gray;
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+}
+
+main section aside div p:first-child {
+  background-color: red;
+}
+
+main section aside div p:nth-child(2) {
+  background-color: blue;
+}
+
+main section aside div p:last-child {
+  background-color: yellow;
+}
+
+@media (max-width: 850px) {
+  main section span,
+  main section p {
+    font-size: 80px
+  }
+}
+
+@media (max-width: 700px) {
+  main section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  main section span,
+  main section p {
+    font-size: 60px
+  }
+
+  main section aside div p {
+    display: inline-block;
+    width: 140px;
+    height: 110px;
+    line-height: 105px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  main section span,
+  main section p {
+    font-size: 40px
+  }
+
+  main section aside div p {
+    width: 100px;
+    height: 100px;
+    line-height: 95px;
+    padding: 0;
+  }
+}

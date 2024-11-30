@@ -1,0 +1,82 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; 
+  overflow: hidden;
+  background-color: #32323b;
+}
+
+.time {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-evenly;
+  font-size: 100px;
+  font-family: monospace;
+  width: 100%;
+  padding: 20px;
+  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+}
+
+.time p {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(red 0deg, #32323b 0deg);
+  line-height: 200px;
+  border-radius: 50%;
+  color: white; 
+  border: 2px solid black;
+}
+
+.time p:nth-child(1)::before {
+  content: 'hr';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60px;
+  font-size: 30px;
+  color: white;
+}
+
+.time p:nth-child(2)::before {
+  content: 'min';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60px;
+  font-size: 30px;
+  color: white;
+}
+
+.time p:nth-child(3)::before {
+  content: 'sec';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60px;
+  font-size: 30px;
+  color: white;
+}
+
+.buttons button {
+  margin: 30px 10px;
+  padding: 10px 25px;
+  font-size: 30px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid black;
+  color: white;
+  background-color: #32323b;
+}

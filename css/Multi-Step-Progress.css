@@ -1,0 +1,92 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 600px;
+  height: 180px;
+}
+
+.container .parent-span {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container .parent-span span {
+  display: inline-block;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  color: blue;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 65px;
+  border-radius: 50%;
+  border: 5px solid #5d5757;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+}
+
+.container .parent-span .active {
+  border-color: blue;
+}
+
+.container .parent-span span:not(:last-child):before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 5px;
+  background-color: #5d5757;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.container .parent-span span p {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 5px;
+  background: blue;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.container .buttons {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.container .buttons button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  background: blue;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 10px 0 10px;
+}

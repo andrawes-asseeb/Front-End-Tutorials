@@ -1,0 +1,47 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #777;
+}
+
+.box {
+  position: relative;
+  width: 500px;
+  height: fit-content;
+  background-color: #DDD;
+}
+
+.box header {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
+}
+
+.box header select {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.box header label {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.box p {
+  padding: 15px;
+  text-align: center;
+}

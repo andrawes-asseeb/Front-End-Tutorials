@@ -1,0 +1,86 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.parent {
+  position: relative;
+  width: 400px;
+  height: 280px;
+  background: #EEE
+}
+
+.parent .screen-input {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 10px;
+  background: #DDD;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.parent .letters {
+  position: relative;
+  width: 100%;
+  height: 135px;
+  overflow: hidden;
+}
+
+.parent .letters .first-row {
+  width: 83%;
+  margin: 7px auto;
+}
+
+.parent .letters .second-row {
+  width: 74%;
+  margin: 7px auto;
+}
+
+.parent .letters .third-row {
+  width: 58%;
+  margin: 7px auto;
+}
+
+.same {
+  padding: 9px;
+  background: red;
+  position: absolute;
+  right: 5px;
+  top: 90px;
+  cursor: pointer;
+}
+
+.parent .letters .upper {
+  right: 15px;
+  z-index: -1;
+}
+
+.parent .letters button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 0 3px 0px;
+}
+
+.parent #space {
+  padding: 15px;
+  margin: 5px 30px;
+  border: none;
+  background-color: white;
+  font-size: 20px;
+  cursor: pointer;
+  width: 85%
+}

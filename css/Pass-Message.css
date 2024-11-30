@@ -1,0 +1,61 @@
+
+* {
+  padding: 0; 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to top, #EEE , #003cff);
+}
+
+.main {
+  width: 500px;
+  min-height: 250px;
+  margin: 100px auto;
+  background-color: #DDD;
+  overflow: hidden;
+}
+
+.main p {
+  text-align: center;
+  padding: 20px 20px 0px 20px;
+}
+
+.main hr {
+  width: 90%;
+  margin: 15px auto;
+}
+
+.main .inp {
+  position: relative;
+  width: 80%;
+  height: 40px;
+  border: none;
+  margin: 15px 50px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.main .sub {
+  border: none;
+  margin-left: 50px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.main #DeletAll {
+  display: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  margin-left: 27%;
+}
+
+.main .pContainer {
+  padding-bottom: 10px;
+}

@@ -1,0 +1,303 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  counter-reset: sec;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #0c022c;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background-color: white;
+}
+
+.container header .search button,
+.container main .students-report button {
+  padding: 10px;
+  border: 1px solid #5f2dff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;  
+  color: #5f2dff;
+  transition: 0.3s;
+}
+
+.container header .search button:hover,
+.container main .students-report button:hover {
+  background-color: #5f2dff;
+  color: white;
+}
+
+.container header .search input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  border-radius: 10px;
+  font-size: 15px;
+  border: 1px solid #DDD;
+}
+
+.container header h1 {
+  font-weight: 500;
+  font-size: 25px;
+  font-family: cursive;
+}
+
+/* #################################################################################################### */
+
+.dark {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000007e;
+  z-index: 1;
+}
+
+/* main */
+
+.container main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 20px;
+  position: relative;
+  height: 550px;
+  border-radius: 0.25rem;
+  margin-top: 2px;
+  background-image: url('../images/portfolio-2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container main aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 250px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container main aside .center {
+  width: 90%;
+  font-family: system-ui;
+}
+
+.container main aside .center h3 {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid ;
+  transition: 0.3s;
+}
+
+.container main aside .center h3:hover {
+  background-color: #5f2dff;
+  color: white;
+  transform: scale(1.2)
+}
+
+/* ################################# */
+
+.container main .students-report {
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow-y: auto;
+  border-radius: 10px;
+  background-color: #ffffff7a;
+  box-shadow: 0 0 20px -5px;
+  transition: 0.5s;
+}
+
+/* custom the scrollbar */
+.container main .students-report::-webkit-scrollbar {
+  width: 15px;
+}
+
+.container main .students-report::-webkit-scrollbar-track{
+  background: linear-gradient(45deg, #f4f4f4, #eaeaea);
+  border-radius: 10px;
+}
+
+.container main .students-report::-webkit-scrollbar-thumb {
+  background-color: #888;
+  background-image: linear-gradient(180deg, #888, #555);
+  border-radius: 10px;
+  border: 2px solid #f4f4f4;
+}
+
+.container main .students-report header {
+  background-color: #ffffff7a;
+}
+
+/* ######################################################################## */
+
+/* Data Entering */
+
+.data {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 300px;
+  padding: 20px;
+  height: 360px;
+  background: white;
+  z-index: 11;
+}
+
+.data > * {
+  margin: 10px 0 10px;
+}
+
+.data > input {
+  border: none;
+  padding: 10px;
+  outline: 1px solid #DDD;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.data :nth-child(6) {
+  margin-left: 10px;
+}
+
+.data :nth-child(7) {
+  margin-right: 10px;
+}
+
+.data > input:focus {
+  border: 2px solid #11adeb;
+}
+
+.data .submit button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  transition: 0.3s;
+}
+
+.data .submit button:first-child {
+  background-color: #333030;
+  margin-right: 10px;
+}
+
+.data .submit button:last-child {
+  background-color: #11adeb;
+}
+
+/* #################################### */
+
+.contDiv {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row-reverse;
+  background: white;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.contDiv::before {
+  counter-increment: sec;
+  content: counter(sec);
+  position: absolute;
+  right: 20px;
+  background: #11adeb;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 25px
+}
+
+.contDiv * {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.contDiv :nth-child(4) {
+  background-color: #11adeb;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+.contDiv :nth-child(5) {
+  color: red;
+  cursor: pointer;
+}
+
+.contDiv i {
+  cursor: pointer;
+}
+
+/* ########################################################################################## */
+
+.delete {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 11;
+  background-color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.delete p {
+  font-size: 25px;
+}
+
+.delete .buttons button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #00c600;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.delete .buttons button:first-child {
+  background-color: #ff2525;
+}
